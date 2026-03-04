@@ -1,7 +1,9 @@
 node('agent') {
 
  try {
-
+ stage('Clone') {
+  git branch: 'main', url: 'https://github.com/Acsel28/File-Encrypter.git'
+ }
  stage('Build') {
  sh '''
  echo "Building Java project..."
